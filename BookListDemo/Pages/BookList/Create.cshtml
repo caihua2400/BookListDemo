@@ -1,0 +1,68 @@
+﻿@page
+@model CreateModel
+@{
+}
+
+<br />
+
+<h3 class="text-info">Create New Book</h3>
+<br />
+
+<div class="border">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="container" style="padding : 30px;">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="book.Name"></label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input asp-for="book.Name" class="form-control"/>
+                    </div>
+                    <div class="col-sm-4">
+                        <span asp-validation-for="book.Name" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="book.Author"></label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input asp-for="book.Author" class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label asp-for="book.ISBN"></label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input asp-for="book.ISBN" class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+
+                    <div class="col-sm-2 offset-sm-2">
+                        <input type="submit" value="Create" class="btn btn-primary form-control"/>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <a asp-page="Index" class="btn btn-success form-control" >Back To List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
